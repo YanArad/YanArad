@@ -1,0 +1,25 @@
+/* Light mode (default) */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-surface: #f3f4f6;
+  --color-border: #e5e7eb;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark mode - toggled via .dark class on <html> */
+html.dark {
+  --color-bg: #1e1e1e;
+  --color-text: #f1f1f1;
+  --color-surface: #2c2c2c;
+  --color-border: #444444;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  /* Contrast ratios:
+     Light: #1a1a1a on #ffffff = 16.1:1 (AAA)
+     Dark:  #f1f1f1 on #1e1e1e = 14.7:1 (AAA)
+  */
+}
